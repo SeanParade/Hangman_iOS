@@ -24,6 +24,10 @@ class GameController: UIViewController{
     //display win/lose text : change color to green/red
     @IBOutlet weak var winLabel: UILabel!
     
+    var wordList:[String] = [];
+    var currentWord: String = "";
+    var gameState: String = "Play";
+    
     //click action to switch scenes to About game
     @IBAction func infoBtnClick(_ sender: UIButton) {
     }
@@ -35,21 +39,50 @@ class GameController: UIViewController{
         testLabel.text = sender.currentTitle;
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        /*
+        let wordProvider = new WordProvider();
+        wordList = wordProvider.get();
+         */
+    }
+    override func viewWillAppear(_ animated: Bool){
+        super.viewWillAppear(animated)
+        if(currentWord == ""){
+            getRandomWord()
+        }
+        for _ in 0...currentWord.count{
+            let label = UILabel();
+            label.text = "_";
+            guessView.addSubview(label);
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func getRandomWord(){
+        let wordListLength = UInt32(wordList.count-1)
+        let randomInt = Int(arc4random_uniform(wordListLength))
+        currentWord = wordList[randomInt]
+        
+    }
+    func indexOf(letter: Character)->([Int]){
+        var positions = [Int]();
+        let chars = Array(currentWord)
+        for char in chars{
+            if(letter == char){
+                positions.append()
+            }
+        }
+    }
     
     
 }
-class KeyboardController: UICollectionViewController{
-    
-}
+
 
 
