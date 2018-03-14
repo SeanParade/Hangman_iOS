@@ -10,7 +10,9 @@ import UIKit
 
 class GameController: UIViewController{
     
-    //view for hangman diagram
+    
+    @IBOutlet weak var testLabel: UILabel!
+    
     @IBOutlet weak var hangmanView: UIView!
     
     //view that contains cells with buttons: might not need
@@ -23,12 +25,14 @@ class GameController: UIViewController{
     @IBOutlet weak var winLabel: UILabel!
     
     //click action to switch scenes to About game
-    @IBAction func infoBtnClick(_ sender: Any) {
+    @IBAction func infoBtnClick(_ sender: UIButton) {
     }
+    
     
     //click action for all buttons in keyboard : tagged with 0-25
     //log which letter clicked && change text color && disable button
-    @IBAction func letterClick(_ sender: Any) {
+    @IBAction func letterClick(_ sender: UIButton) {
+        testLabel.text = sender.currentTitle;
     }
     
     override func viewDidLoad() {
@@ -41,4 +45,11 @@ class GameController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
 }
+class KeyboardController: UICollectionViewController{
+    
+}
+
+
