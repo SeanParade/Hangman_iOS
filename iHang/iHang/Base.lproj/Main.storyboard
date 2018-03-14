@@ -27,7 +27,7 @@
         <!--GameBoard-->
         <scene sceneID="dMa-w5-WMV">
             <objects>
-                <viewController title="GameBoard" id="JEb-T3-IWt" sceneMemberID="viewController">
+                <viewController title="GameBoard" id="JEb-T3-IWt" customClass="GameController" customModule="iHang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Mz-3K-mfO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,6 +36,9 @@
                                 <rect key="frame" x="313" y="20" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="!"/>
+                                <connections>
+                                    <action selector="infoBtnClick:" destination="JEb-T3-IWt" eventType="touchUpInside" id="89b-08-9Zn"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f96-ff-vNr">
                                 <rect key="frame" x="67" y="66" width="240" height="261"/>
@@ -72,6 +75,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <state key="normal" title="a"/>
+                                                    <connections>
+                                                        <action selector="letterClick:" destination="JEb-T3-IWt" eventType="touchUpInside" id="ca5-Md-r2X"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -486,6 +492,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="7BW-ff-TM9"/>
                     </view>
+                    <connections>
+                        <outlet property="guessView" destination="vqE-NG-bz6" id="fLd-Bd-Tyq"/>
+                        <outlet property="hangmanView" destination="nAb-QC-7GW" id="DuN-TY-b31"/>
+                        <outlet property="infoBtn" destination="nAb-QC-7GW" id="rt7-Oz-zoO"/>
+                        <outlet property="infoBtnClick" destination="nAb-QC-7GW" id="8KU-63-pSk"/>
+                        <outlet property="keyboardView" destination="CXq-Yx-zSi" id="nvv-oq-2Aa"/>
+                        <outlet property="winLabel" destination="jjJ-RF-ACg" id="ilN-Ee-clP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceC-CK-Pxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
