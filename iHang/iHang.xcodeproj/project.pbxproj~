@@ -91,7 +91,11 @@
 		18C6037020597608006E750F /* iHang */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				18C6039720598BC4006E750F /* WordLists */,
+=======
+				18242F8B20598A90004FBA4F /* GameController.swift */,
+>>>>>>> nooran
 				18C6037120597608006E750F /* AppDelegate.swift */,
 				18C6037320597608006E750F /* ViewController.swift */,
 				18DC803820598D7A0090BEE4 /* TutorialView.swift */,
@@ -218,7 +222,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C6037420597608006E750F /* ViewController.swift in Sources */,
+<<<<<<< HEAD
 				18C60396205981CF006E750F /* WordProvider.swift in Sources */,
+=======
+				18242F8C20598A90004FBA4F /* GameController.swift in Sources */,
+>>>>>>> nooran
 				18C6037220597608006E750F /* AppDelegate.swift in Sources */,
 				18DC803920598D7A0090BEE4 /* TutorialView.swift in Sources */,
 			);
