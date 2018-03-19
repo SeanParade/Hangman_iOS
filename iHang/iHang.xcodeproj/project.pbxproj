@@ -7,19 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18242F8C20598A90004FBA4F /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18242F8B20598A90004FBA4F /* GameController.swift */; };
 		18C6037220597608006E750F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C6037120597608006E750F /* AppDelegate.swift */; };
 		18C6037420597608006E750F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C6037320597608006E750F /* ViewController.swift */; };
 		18C6037720597608006E750F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C6037520597608006E750F /* Main.storyboard */; };
 		18C6037920597608006E750F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C6037820597608006E750F /* Assets.xcassets */; };
 		18C6037C20597608006E750F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C6037A20597608006E750F /* LaunchScreen.storyboard */; };
 		18C6038720597608006E750F /* iHangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C6038620597608006E750F /* iHangTests.swift */; };
-<<<<<<< HEAD
 		18C60396205981CF006E750F /* WordProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C60395205981CF006E750F /* WordProvider.swift */; };
 		18C6039820598BC4006E750F /* WordLists in Resources */ = {isa = PBXBuildFile; fileRef = 18C6039720598BC4006E750F /* WordLists */; };
-=======
 		18DC803920598D7A0090BEE4 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC803820598D7A0090BEE4 /* TutorialView.swift */; };
->>>>>>> dylansbranch
+		665D9924206079EB00BD884F /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 665D9923206079EB00BD884F /* Game.storyboard */; };
+		665D9926206081AF00BD884F /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665D9925206081AF00BD884F /* GameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +31,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18242F8B20598A90004FBA4F /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		18C6036E20597608006E750F /* iHang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C6037120597608006E750F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C6037320597608006E750F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,12 +41,11 @@
 		18C6038220597608006E750F /* iHangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iHangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C6038620597608006E750F /* iHangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iHangTests.swift; sourceTree = "<group>"; };
 		18C6038820597608006E750F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		18C60395205981CF006E750F /* WordProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordProvider.swift; sourceTree = "<group>"; };
 		18C6039720598BC4006E750F /* WordLists */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WordLists; sourceTree = "<group>"; };
-=======
 		18DC803820598D7A0090BEE4 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
->>>>>>> dylansbranch
+		665D9923206079EB00BD884F /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		665D9925206081AF00BD884F /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +96,8 @@
 				18C6037A20597608006E750F /* LaunchScreen.storyboard */,
 				18C6037D20597608006E750F /* Info.plist */,
 				18C60395205981CF006E750F /* WordProvider.swift */,
+				665D9923206079EB00BD884F /* Game.storyboard */,
+				665D9925206081AF00BD884F /* GameController.swift */,
 			);
 			path = iHang;
 			sourceTree = "<group>";
@@ -199,6 +197,7 @@
 				18C6039820598BC4006E750F /* WordLists in Resources */,
 				18C6037C20597608006E750F /* LaunchScreen.storyboard in Resources */,
 				18C6037920597608006E750F /* Assets.xcassets in Resources */,
+				665D9924206079EB00BD884F /* Game.storyboard in Resources */,
 				18C6037720597608006E750F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C6037420597608006E750F /* ViewController.swift in Sources */,
+				665D9926206081AF00BD884F /* GameController.swift in Sources */,
 				18C60396205981CF006E750F /* WordProvider.swift in Sources */,
 				18C6037220597608006E750F /* AppDelegate.swift in Sources */,
 				18DC803920598D7A0090BEE4 /* TutorialView.swift in Sources */,

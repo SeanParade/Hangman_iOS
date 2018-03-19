@@ -2,9 +2,11 @@
 //  GameController.swift
 //  iHang
 //
-//  Created by Tech on 2018-03-14.
+//  Created by Nooran El-Sherif on 2018-03-19.
 //  Copyright © 2018 GBC. All rights reserved.
 //
+
+import Foundation
 
 import UIKit
 
@@ -13,10 +15,8 @@ class GameController: UIViewController{
     
     @IBOutlet weak var testLabel: UILabel!
     
+    //where hangman will be drawn
     @IBOutlet weak var hangmanView: UIView!
-    
-    //view that contains cells with buttons: might not need
-    @IBOutlet weak var keyboardView: UICollectionView!
     
     //view for labels : generated # depending on word
     @IBOutlet weak var guessView: UIStackView!
@@ -32,7 +32,7 @@ class GameController: UIViewController{
     //click action for all buttons in keyboard : tagged with 0-25
     //log which letter clicked && change text color && disable button
     @IBAction func letterClick(_ sender: UIButton) {
-        testLabel.text = sender.currentTitle;
+       testLabel.text = sender.currentTitle;
     }
     
     override func viewDidLoad() {
@@ -46,9 +46,6 @@ class GameController: UIViewController{
     }
     
     
-    
-}
-class KeyboardController: UICollectionViewController{
     
 }
 
