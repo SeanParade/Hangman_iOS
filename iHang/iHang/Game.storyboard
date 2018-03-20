@@ -24,6 +24,7 @@
                                 <state key="normal" title="i"/>
                                 <connections>
                                     <action selector="infoBtnClick:" destination="cBH-di-56T" eventType="touchUpInside" id="6zy-9R-V34"/>
+                                    <segue destination="QSI-zu-3Nd" kind="show" id="qLI-QP-qUc"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0o4-hB-hrk">
@@ -94,7 +95,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDL-xr-Jtu">
-                                <rect key="frame" x="305" y="442" width="30" height="30"/>
+                                <rect key="frame" x="301" y="442" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="h"/>
@@ -299,6 +300,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqg-Lh-aOm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-106.40000000000001" y="65.217391304347828"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="eWw-r5-efE">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TutorialScreen" id="QSI-zu-3Nd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5oQ-EY-woP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="444" y="20"/>
         </scene>
     </scenes>
 </document>

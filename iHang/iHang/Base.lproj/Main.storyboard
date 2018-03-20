@@ -13,7 +13,6 @@
         <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController title="Welcome" id="BYZ-38-t0r" customClass="ViewController" customModule="iHang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -36,6 +35,7 @@
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EH7-1a-cO9"/>
+                                    <segue destination="3dH-Va-enY" kind="show" id="ffg-ch-b85"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,13 +52,14 @@
                         <segue destination="FzI-BB-gJ7" kind="show" identifier="tutIdentifier" id="R0A-33-sTv"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="364" y="29.23538230884558"/>
         </scene>
         <!--Tutorial-->
         <scene sceneID="4yi-qk-En5">
             <objects>
-                <viewController title="Tutorial" id="FzI-BB-gJ7" customClass="TutorialView" customModule="iHang" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialscreen" title="Tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FzI-BB-gJ7" customClass="TutorialView" customModule="iHang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2q1-kL-rcb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,6 +89,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dylan Roberts - 100727526  Nooran El-Sherif - 100695733  Sean Price - 101015020" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYt-I7-XXJ">
                                 <rect key="frame" x="16" y="454" width="343" height="145"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -107,6 +109,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woT-kl-hjk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1372" y="28.335832083958024"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="HpK-vM-u3c">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="GameScreen" id="3dH-Va-enY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wr6-J2-6MF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313" y="-459"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cjk-di-feq">
