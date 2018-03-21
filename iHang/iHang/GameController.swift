@@ -29,9 +29,6 @@ class GameController: UIViewController{
     var numGuesses: Int = 6
     var numBlanks: Int = 6
     
-    //click action to switch scenes to About game
-    @IBAction func infoBtnClick(_ sender: UIButton) {
-    }
     
     
     //click action for all buttons in keyboard
@@ -82,7 +79,8 @@ class GameController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
-        
+        let wp = WordProvider();
+        wordList = wp.wordList;
         //if there's no word, choose a random one
         if(currentWord == "")
         {
@@ -135,6 +133,8 @@ class GameController: UIViewController{
     }
     //func reset()
     //move initial values to here and call on button press or when view is first loaded
+    
+    
 }
 
 

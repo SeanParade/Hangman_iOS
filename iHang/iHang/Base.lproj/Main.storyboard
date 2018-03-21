@@ -28,14 +28,16 @@
                                 <rect key="frame" x="118" y="277.5" width="139" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="About"/>
+                                <connections>
+                                    <action selector="aboutClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HKH-Fd-1bY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3N-dj-eqN">
                                 <rect key="frame" x="170" y="196" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <action selector="startBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EH7-1a-cO9"/>
-                                    <segue destination="3dH-Va-enY" kind="show" id="ffg-ch-b85"/>
+                                    <segue destination="3dH-Va-enY" kind="show" identifier="startIdentifier" id="ffg-ch-b85"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="1372" y="28.335832083958024"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--gamescreen-->
         <scene sceneID="HpK-vM-u3c">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="GameScreen" id="3dH-Va-enY" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="GameScreen" storyboardName="Game" referencedIdentifier="gamescreen" id="3dH-Va-enY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wr6-J2-6MF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="313" y="-459"/>

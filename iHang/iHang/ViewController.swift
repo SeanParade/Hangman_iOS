@@ -21,9 +21,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func startBtn(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "tutIdentifier",  sender: self)
+    
+    @IBAction func aboutClick(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "tutIdentifier", sender: self)
     }
-
+    
 }
 
