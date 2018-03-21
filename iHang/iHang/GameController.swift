@@ -18,8 +18,17 @@ class GameController: UIViewController{
     // where hangman will be drawn
     @IBOutlet weak var hangmanView: UIView!
     
+    @IBOutlet weak var retryButton: UIButton!
+    @IBAction func newGameClick(_ sender: Any) {
+        getRandomWord();
+        newGame();
+    }
+    
     // view for labels : generated # depending on word
     @IBOutlet weak var guessView: UIStackView!
+    
+    @IBOutlet var keyboardBtnGroup: [UIButton]!
+    
     
     // display win/lose text : change color to green/red
     @IBOutlet weak var winLabel: UILabel!
@@ -66,9 +75,11 @@ class GameController: UIViewController{
      }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        newGame()
     }
     
     override func didReceiveMemoryWarning() {
@@ -116,11 +127,15 @@ class GameController: UIViewController{
             winLabel.textColor = UIColor.red
             winLabel.text = "You Lose!"
             gameOver = true;
+            retryButton.isHidden = false
+            testLabel.isHidden = true
         }
         else if numBlanks == 0{
             winLabel.textColor = UIColor.green
             winLabel.text = "You Win!"
             gameOver = true
+            retryButton.isHidden = false
+            testLabel.isHidden = true
         }
     }
     
@@ -137,9 +152,18 @@ class GameController: UIViewController{
     //move initial values to here and call on button press or when view is first loaded
     
     func newGame() ->(){
+        testLabel.text = "";
         winLabel.text = "";
         numGuesses = 6
         numBlanks = 6
         gameOver = false
+        for btn in keyboardBtnGroup{
+            btn.backgroundColor = UIColor.white;
+            btn.isEnabled = true;
+        }
+        retryButton.isHidden = true;
+        testLabel.isHidden = false;
+        numBlanks = currentWord.count
+        setLabelTags();
     }
 }

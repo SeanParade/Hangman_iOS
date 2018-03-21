@@ -256,13 +256,6 @@
                                             <action selector="letterClick:" destination="cBH-di-56T" eventType="touchUpInside" id="IBv-an-3ee"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gA-Lt-ZjT">
-                                        <rect key="frame" x="206" y="61" width="124" height="73"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -270,10 +263,17 @@
                                 <rect key="frame" x="67" y="48" width="240" height="278"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXH-WO-99d">
-                                        <rect key="frame" x="52" y="70" width="136" height="52"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXH-WO-99d">
+                                        <rect key="frame" x="8" y="223" width="224" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="53"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gA-Lt-ZjT">
+                                        <rect key="frame" x="8" y="0.0" width="224" height="73"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -297,9 +297,20 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9yX-Jx-eUS" userLabel="Guess View">
-                                <rect key="frame" x="87" y="254" width="241" height="117"/>
+                                <rect key="frame" x="66" y="286" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRK-9a-x4a">
+                                <rect key="frame" x="90" y="286" width="195" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGameClick:" destination="cBH-di-56T" eventType="touchUpInside" id="Fcs-XQ-gTH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="G7L-jD-D6q"/>
@@ -307,8 +318,35 @@
                     <connections>
                         <outlet property="guessView" destination="9yX-Jx-eUS" id="QOF-Ci-AB5"/>
                         <outlet property="hangmanView" destination="aRX-pR-Z3y" id="y3v-lk-1Ae"/>
+                        <outlet property="retryButton" destination="hRK-9a-x4a" id="sbh-iO-Plg"/>
                         <outlet property="testLabel" destination="AXH-WO-99d" id="Rka-cP-QbH"/>
                         <outlet property="winLabel" destination="0gA-Lt-ZjT" id="hoS-uj-Y2P"/>
+                        <outletCollection property="keyboardBtnGroup" destination="7g9-RZ-vf8" collectionClass="NSMutableArray" id="d9h-yI-GHn"/>
+                        <outletCollection property="keyboardBtnGroup" destination="HD5-Va-w9I" collectionClass="NSMutableArray" id="ihS-ri-RGz"/>
+                        <outletCollection property="keyboardBtnGroup" destination="Pzt-lB-wtc" collectionClass="NSMutableArray" id="7lH-ws-Z6e"/>
+                        <outletCollection property="keyboardBtnGroup" destination="Pdm-9z-Qwi" collectionClass="NSMutableArray" id="bUP-t1-EEg"/>
+                        <outletCollection property="keyboardBtnGroup" destination="8K4-nl-JrP" collectionClass="NSMutableArray" id="K6m-Ay-OtZ"/>
+                        <outletCollection property="keyboardBtnGroup" destination="tnf-s8-s12" collectionClass="NSMutableArray" id="ctE-QL-lXn"/>
+                        <outletCollection property="keyboardBtnGroup" destination="3Oz-5N-jHv" collectionClass="NSMutableArray" id="Ctk-2S-IjQ"/>
+                        <outletCollection property="keyboardBtnGroup" destination="QDL-xr-Jtu" collectionClass="NSMutableArray" id="Pjg-U4-D5v"/>
+                        <outletCollection property="keyboardBtnGroup" destination="Im7-YD-40P" collectionClass="NSMutableArray" id="sF8-DY-oeT"/>
+                        <outletCollection property="keyboardBtnGroup" destination="ah2-MM-E4Y" collectionClass="NSMutableArray" id="80A-pP-q0z"/>
+                        <outletCollection property="keyboardBtnGroup" destination="8ey-Kb-jR8" collectionClass="NSMutableArray" id="Vl8-Qm-En6"/>
+                        <outletCollection property="keyboardBtnGroup" destination="u7t-f3-bvf" collectionClass="NSMutableArray" id="Eek-M4-RXd"/>
+                        <outletCollection property="keyboardBtnGroup" destination="3vm-Z8-Fit" collectionClass="NSMutableArray" id="Mdm-nf-ias"/>
+                        <outletCollection property="keyboardBtnGroup" destination="kbJ-Im-ngU" collectionClass="NSMutableArray" id="8C8-NG-4fC"/>
+                        <outletCollection property="keyboardBtnGroup" destination="FDe-9V-9Dz" collectionClass="NSMutableArray" id="cET-mL-99q"/>
+                        <outletCollection property="keyboardBtnGroup" destination="gqe-8D-dFH" collectionClass="NSMutableArray" id="HDR-WD-BYc"/>
+                        <outletCollection property="keyboardBtnGroup" destination="dj6-ff-aVJ" collectionClass="NSMutableArray" id="nsz-3c-gAU"/>
+                        <outletCollection property="keyboardBtnGroup" destination="Jm2-LO-fan" collectionClass="NSMutableArray" id="gDa-Ti-ibI"/>
+                        <outletCollection property="keyboardBtnGroup" destination="du6-kZ-ted" collectionClass="NSMutableArray" id="fDj-5e-8Li"/>
+                        <outletCollection property="keyboardBtnGroup" destination="vAa-f2-d2g" collectionClass="NSMutableArray" id="RnB-rL-Jor"/>
+                        <outletCollection property="keyboardBtnGroup" destination="Pi6-3a-BUe" collectionClass="NSMutableArray" id="zsc-wc-Zt7"/>
+                        <outletCollection property="keyboardBtnGroup" destination="xIE-yS-pyQ" collectionClass="NSMutableArray" id="wm4-hV-9SO"/>
+                        <outletCollection property="keyboardBtnGroup" destination="zGc-Oq-Bml" collectionClass="NSMutableArray" id="sz8-3h-zir"/>
+                        <outletCollection property="keyboardBtnGroup" destination="kar-Lo-CyG" collectionClass="NSMutableArray" id="28J-Gn-w8g"/>
+                        <outletCollection property="keyboardBtnGroup" destination="LHQ-X6-SAx" collectionClass="NSMutableArray" id="vEK-4Y-LbS"/>
+                        <outletCollection property="keyboardBtnGroup" destination="rJX-qb-m2X" collectionClass="NSMutableArray" id="14o-7p-F1q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqg-Lh-aOm" userLabel="First Responder" sceneMemberID="firstResponder"/>
