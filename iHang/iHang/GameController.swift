@@ -142,7 +142,7 @@ class GameController: UIViewController{
     //generates labels for each letter in the current word
     func setLabelTags(){
         for index in 0...currentWord.count{
-            let label = UILabel();
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
             label.text = "_";
             label.tag = index
             guessView.addSubview(label)
