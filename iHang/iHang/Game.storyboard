@@ -288,6 +288,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MH3-7R-ncG">
+                                        <rect key="frame" x="-8" y="-8" width="257" height="223"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -317,6 +321,7 @@
                     </view>
                     <connections>
                         <outlet property="guessView" destination="9yX-Jx-eUS" id="QOF-Ci-AB5"/>
+                        <outlet property="hangmanDrawBox" destination="MH3-7R-ncG" id="5oi-Hj-hd2"/>
                         <outlet property="hangmanView" destination="aRX-pR-Z3y" id="y3v-lk-1Ae"/>
                         <outlet property="retryButton" destination="hRK-9a-x4a" id="sbh-iO-Plg"/>
                         <outlet property="testLabel" destination="AXH-WO-99d" id="Rka-cP-QbH"/>

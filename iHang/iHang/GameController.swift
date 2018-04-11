@@ -18,6 +18,7 @@ class GameController: UIViewController{
     // where hangman will be drawn
     @IBOutlet weak var hangmanView: UIView!
     
+    @IBOutlet weak var hangmanDrawBox: UIImageView!
     @IBOutlet weak var retryButton: UIButton!
     @IBAction func newGameClick(_ sender: Any) {
         getRandomWord();
@@ -91,6 +92,8 @@ class GameController: UIViewController{
         super.viewWillAppear(animated)
        
     }
+    
+
     
     // Get random word from the word list
     func getRandomWord(){
