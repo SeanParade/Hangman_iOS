@@ -308,7 +308,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9yX-Jx-eUS" userLabel="Guess View">
-                                <rect key="frame" x="164" y="296" width="46" height="30"/>
+                                <rect key="frame" x="0.0" y="311" width="375" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </stackView>
                         </subviews>

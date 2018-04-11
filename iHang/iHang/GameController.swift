@@ -57,7 +57,7 @@ class GameController: UIViewController{
             
             // set labels with button text
             for index in indexes{
-                if let label = self.view.viewWithTag(index) as? UILabel{
+                if let label = self.view.viewWithTag(index + 1) as? UILabel{
                     label.text = sender.currentTitle;
                     numBlanks = numBlanks-1;
                 }
@@ -97,6 +97,7 @@ class GameController: UIViewController{
         let len = UInt32(wordList.count-1)
         let randomInt = Int(arc4random_uniform(len))
         currentWord = wordList[randomInt]
+        print (currentWord)
     }
     
     // returns an array of integers where character is present in word
@@ -133,10 +134,11 @@ class GameController: UIViewController{
     //generates labels for each letter in the current word
     func setLabelTags(){
         var i = 0
-        for index in 0...currentWord.count{
+        for index in 0...currentWord.count - 1{
             let label = UILabel(frame: CGRect(x: 0 + i, y: 0, width: 200, height: 200))
             label.text = "_";
-            label.tag = index
+            label.font = label.font.withSize(35)
+            label.tag = index + 1
             guessView.addSubview(label)
             i += 25
         }
