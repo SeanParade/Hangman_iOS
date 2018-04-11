@@ -89,16 +89,7 @@ class GameController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
-        let wp = WordProvider();
-        wordList = wp.wordList;
-        // if there's no word, choose a random one
-        if(currentWord == "")
-        {
-         getRandomWord()
-        }
-        // number of empty spaces
-        numBlanks = currentWord.count
-        setLabelTags();
+       
     }
     
     // Get random word from the word list
@@ -141,21 +132,32 @@ class GameController: UIViewController{
     
     //generates labels for each letter in the current word
     func setLabelTags(){
+        var i = 0
         for index in 0...currentWord.count{
-            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+            let label = UILabel(frame: CGRect(x: 0 + i, y: 0, width: 200, height: 200))
             label.text = "_";
             label.tag = index
             guessView.addSubview(label)
+            i += 25
         }
     }
     //func reset()
     //move initial values to here and call on button press or when view is first loaded
     
     func newGame() ->(){
+        let wp = WordProvider();
+        wordList = wp.wordList;
+        // if there's no word, choose a random one
+        if(currentWord == "")
+        {
+            getRandomWord()
+        }
+        // number of empty spaces
+        numBlanks = currentWord.count
+        setLabelTags();
         testLabel.text = "";
         winLabel.text = "";
         numGuesses = 6
-        numBlanks = 6
         gameOver = false
         for btn in keyboardBtnGroup{
             btn.backgroundColor = UIColor.white;
@@ -163,6 +165,7 @@ class GameController: UIViewController{
         }
         retryButton.isHidden = true;
         testLabel.isHidden = false;
+        
         numBlanks = currentWord.count
         setLabelTags();
     }
