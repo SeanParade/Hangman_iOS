@@ -121,6 +121,7 @@ class GameController: UIViewController{
             gameOver = true;
             retryButton.isHidden = false
             testLabel.isHidden = true
+            removeLabels()
         }
         else if numBlanks == 0{
             winLabel.textColor = UIColor.green
@@ -128,6 +129,7 @@ class GameController: UIViewController{
             gameOver = true
             retryButton.isHidden = false
             testLabel.isHidden = true
+            removeLabels()
         }
     }
     
@@ -170,5 +172,10 @@ class GameController: UIViewController{
         
         numBlanks = currentWord.count
         setLabelTags();
+    }
+    func removeLabels() {
+        for view in guessView.subviews {
+            view.removeFromSuperview()
+        }
     }
 }
