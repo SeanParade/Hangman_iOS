@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import UIKit
 
 class GameController: UIViewController{
@@ -36,6 +35,7 @@ class GameController: UIViewController{
     
     var wordList:[String] = []
     var currentWord: String = ""
+    var hangmanRenderer = HangmanRenderer();
     var numGuesses: Int = 6
     var numBlanks: Int = 6
     var gameOver = false;
@@ -68,6 +68,7 @@ class GameController: UIViewController{
             // make button red
             sender.backgroundColor = UIColor.red
             // draw hangman vector
+            hangmanDrawBox.image = hangmanRenderer.drawHangman()
             numGuesses = numGuesses-1
         }
         // disable button
@@ -173,6 +174,7 @@ class GameController: UIViewController{
         }
         retryButton.isHidden = true;
         testLabel.isHidden = false;
+        hangmanDrawBox.image = nil;
         
         numBlanks = currentWord.count
         setLabelTags();

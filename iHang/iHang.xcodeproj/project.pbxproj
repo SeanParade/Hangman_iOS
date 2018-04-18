@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185C144E2087AFCB00AFCA54 /* SVGs in Resources */ = {isa = PBXBuildFile; fileRef = 185C144D2087AFCB00AFCA54 /* SVGs */; };
 		18C6037220597608006E750F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C6037120597608006E750F /* AppDelegate.swift */; };
 		18C6037420597608006E750F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C6037320597608006E750F /* ViewController.swift */; };
 		18C6037720597608006E750F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C6037520597608006E750F /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		185C144D2087AFCB00AFCA54 /* SVGs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SVGs; sourceTree = "<group>"; };
 		18C6036E20597608006E750F /* iHang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C6037120597608006E750F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C6037320597608006E750F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		18C6037020597608006E750F /* iHang */ = {
 			isa = PBXGroup;
 			children = (
+				185C144D2087AFCB00AFCA54 /* SVGs */,
 				18C6039720598BC4006E750F /* WordLists */,
 				18C6037120597608006E750F /* AppDelegate.swift */,
 				18C6037320597608006E750F /* ViewController.swift */,
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C6039820598BC4006E750F /* WordLists in Resources */,
+				185C144E2087AFCB00AFCA54 /* SVGs in Resources */,
 				18C6037C20597608006E750F /* LaunchScreen.storyboard in Resources */,
 				18C6037920597608006E750F /* Assets.xcassets in Resources */,
 				665D9924206079EB00BD884F /* Game.storyboard in Resources */,
