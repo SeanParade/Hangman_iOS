@@ -50,8 +50,8 @@
                                     <segue destination="3dH-Va-enY" kind="show" identifier="startIdentifier" id="ffg-ch-b85"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hangman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s06-lf-Bg2">
-                                <rect key="frame" x="50" y="114" width="275" height="33.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iHang" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s06-lf-Bg2">
+                                <rect key="frame" x="50" y="114" width="275" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -134,7 +134,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="GameScreen" storyboardName="Game" referencedIdentifier="gamescreen" id="3dH-Va-enY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wr6-J2-6MF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="-459"/>
+            <point key="canvasLocation" x="886" y="-497"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cjk-di-feq">

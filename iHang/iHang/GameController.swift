@@ -47,7 +47,7 @@ class GameController: UIViewController{
        
         if !gameOver {
        // show letter that is clicked in test label
-        testLabel.text?.append(sender.currentTitle!);
+       // testLabel.text?.append(sender.currentTitle!);
         
         let char = Character(sender.currentTitle!)
         let indexes = getIndexesOf(letter: char)
@@ -80,6 +80,7 @@ class GameController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        guessView.frame.origin.x = view.frame.width/2 - guessView.frame.width/2
         newGame()
     }
     
