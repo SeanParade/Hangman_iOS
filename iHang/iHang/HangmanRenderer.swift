@@ -11,13 +11,32 @@ import UIKit
 
 class HangmanRenderer{
     
-    func setupHangmanDraw(){
-        let images:Array<UIImage> = [#imageLiteral(resourceName: "1Wrong.pdf"),#imageLiteral(resourceName: "2Wrong.pdf"),#imageLiteral(resourceName: "3Wrong.pdf"),#imageLiteral(resourceName: "4Wrong.pdf"),#imageLiteral(resourceName: "5Wrong.pdf"),#imageLiteral(resourceName: "6Wrong.pdf")]
-        
+    var images:[String] = [];
+    init () {
+        self.images = setupHangmanDraw();
+    }
+    
+    func setupHangmanDraw() -> ([String]){
+        return ["6Wrong","5Wrong","4Wrong","3Wrong","2Wrong","1Wrong"]
     }
     
     // Hangman drawing
-    func drawHangman(){
+    func drawHangman() -> UIImage? {
         
+        var nextImage = self.images.popLast()
+        if nextImage == nil {
+            self.images = setupHangmanDraw();
+            nextImage = self.images.popLast()
+        }
+        
+        if let imageUrl = Bundle.main.path(forResource:nextImage, ofType:"png", inDirectory:"SVGs"){
+        do
+        {
+              let image =  UIImage(contentsOfFile: imageUrl)
+              print(imageUrl)
+              return image;
+            }
+        }
+        return nil
     }
 }
